@@ -80,7 +80,7 @@ header#top {
 .arrow-up {
   position: fixed; /* Posición fija en pantalla */
   bottom: 1.25rem; /* distancia desde abajo */
-  right: 1.25rem; /* distancia desde la derecha */
+  left: 1.25rem; /* a la izquierda: el distintivo de Netlify ocupa la esquina derecha */
   z-index: 99; /* encima de otros elementos (por debajo del header) */
   opacity: 0.7; /* transparencia del botón */
   -webkit-transition:
@@ -1220,7 +1220,6 @@ footer p {
     justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
     align-items: center; /* centra vertical */
     padding: 0.8rem 1rem;
-    position: relative; /* referencia para el menú despliegue desde este punto */
   }
 
   .header-logo {
