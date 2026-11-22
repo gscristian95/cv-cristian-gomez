@@ -62,4 +62,6 @@ El botón "Descargar CV" apunta a `assets/docs/Currículum Vitae - Cristian Góm
 
 ## Demo
 
-<!-- Pendiente: añadir aquí un GIF de demostración cuando el despliegue esté funcionando. -->
+<p align="center">
+  <img src="./assets/gif/demo.gif" alt="Demo" width="600" />
+</p>
