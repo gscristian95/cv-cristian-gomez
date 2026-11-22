@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (themeToggleBtn) themeToggleBtn.textContent = "🌙";
   }
 
+  // Si se pulsa el botón fuera del texto del enlace, activa el enlace que contiene
+  const btnDescargar = document.getElementById("btn-descargar-cv");
+  btnDescargar?.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;
+    btnDescargar.querySelector("a")?.click();
+  });
+
   //   Manejar la iteracción del botón al hacer click
   themeToggleBtn?.addEventListener("click", () => {
     // Si la clase ya esta en el body, se quita al hacer toggle, si no esta, la añade
