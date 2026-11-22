@@ -62,6 +62,5 @@ El botón "Descargar CV" apunta a `assets/docs/Currículum Vitae - Cristian Góm
 
 ## Demo
 
-<p align="center">
-  <img src="./assets/gif/demo.gif" alt="Demo" width="600" />
-</p>
+<!-- Pendiente: subir el GIF arrastrándolo al editor de este README en GitHub y pegar aquí la URL que genera (<p align="center"><img src="URL" alt="Demo" width="600" /></p>). -->
+
