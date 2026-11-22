@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@import url("../formal.css");
+
+/* VERSION ANIMADA */
+/* La propiedad transition sin prefijo para navegadores lleva más de un década soportada por todos los navegadores, asi que eran redundantes.
+El prefijo de la propiedad transform para navegadores, si son necesarios */
+
+/* Redefinición de Variables CSS (Paleta Animada "Arcade Pop") */
+:root {
+  --bg-main: #0b0f19; /* Azul noche muy oscuro, casi negro, para máximo contraste */
+  --bg-card: #151b2b; /* Tarjetas en azul profundo */
+  --bg-card-hover: #1e263d; /* Hover azul eléctrico sutil */
+  --bg-badge: #2a1b41; /* Fondo para etiquetas con un toque púrpura */
+
+  --text-main: #f0f3ff; /* Texto principal blanco con tinte azulado */
+  --text-muted: #8b9bb4; /* Texto secundario gris azulado */
+  --text-light: #ffffff;
+
+  --primary: #ff2a5f; /* Rosa neón / Fucsia (súper vibrante para botones/animaciones) */
+  --secondary: #00e5ff; /* Cyan / Turquesa eléctrico (contraste juguetón) */
+  --border-color: #2a3441; /* Bordes suaves para no ensuciar la vista */
+
+  --radius-sm: 10px; /* Bordes un poco más redondeados y amigables */
+  --radius-md: 18px; /* Look más burbuja/animado */
+  --radius-full: 9999px;
+
+  /* Sombra fucsia brillante para dar efecto de resplandor (glow) en animaciones */
+  --shadow-main: 0 10px 30px -5px rgba(255, 42, 95, 0.35);
+  --shadow-hover: 0 8px 20px rgba(0, 232, 249, 0.712);
+}
+
+/* Modo Claro alternativo (Vibra "Candy/Pastel") */
+body.light-theme {
+  --bg-main: #f4f7fe; /* Fondo claro azul hielo muy suave */
+  --bg-card: #ffffff; /* Tarjetas blancas y limpias */
+  --bg-card-hover: #eaf0ff; /* Hover azul pastel */
+  --bg-badge: #ffe1e8; /* Etiquetas rosadas claras */
+
+  --text-main: #111827; /* Texto principal oscuro y nítido */
+  --text-muted: #6b7280; /* Texto secundario neutro */
+
+  --primary: #fb1956; /* Fucsia intenso para acentos sobre blanco */
+  --secondary: #00c4a7; /* Menta vibrante */
+  --border-color: #e5e7eb;
+
+  /* Sombra más ligera pero juguetona */
+  --shadow-main: 0 8px 24px rgba(251, 25, 86, 0.35);
+}
+
+body:hover .header-logo img {
+  transform: rotateY(360deg) scale(1.1);
+  -webkit-transform: rotateY(360deg) scale(1.1);
+  -moz-transform: rotateY(360deg) scale(1.1);
+  -o-transform: rotateY(360deg) scale(1.1);
+  -ms-transform: rotateY(360deg) scale(1.1);
+}
+
+.header-logo img {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover .header-logo h1 {
+  transform: rotateX(360deg) scale(1.1);
+  -webkit-transform: rotateX(360deg) scale(1.05);
+  -moz-transform: rotateX(360deg) scale(1.05);
+  -o-transform: rotateX(360deg) scale(1.05);
+  -ms-transform: rotateX(360deg) scale(1);
+}
+
+.header-logo h1 {
+  transition: all 0.8s ease-in-out;
+}
+
+.navigation-container label:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover #datosPersonales span {
+  transform: translateY(-2px);
+  color: var(--secondary);
+  -webkit-transform:
+    translateY(-2px),
+    color var(--secondary);
+  -moz-transform:
+    translateY(-2px),
+    color var(--secondary);
+  -o-transform:
+    translateY(-2px),
+    color var(--secondary);
+  -ms-transform:
+    translateY(-2px),
+    color var(--secondary);
+}
+
+#datosPersonales span {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover #datosPersonales h2:nth-child(3) {
+  transform: rotateX(360deg);
+  -webkit-transform: rotateX(360deg);
+  -moz-transform: rotateX(360deg);
+  -o-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+}
+
+#datosPersonales h2:nth-child(3) {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover #datosPersonales h3 {
+  color: var(--primary);
+}
+
+#datosPersonales h3 {
+  transition: all 0.8s ease-in-out;
+}
+
+section {
+  transition: all 0.8s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-5px) scale(1.01);
+  -webkit-transform: translateY(-5px) scale(1.01);
+  -moz-transform: translateY(-5px) scale(1.01);
+  -o-transform: translateY(-5px) scale(1.01);
+  -ms-transform: translateY(-5px) scale(1.01);
+}
+
+.about-container p,
+img {
+  transition: all 0.8s ease-in-out;
+}
+
+span {
+  transition: all 0.8s ease-in-out;
+}
+
+.about-container p:hover {
+  text-transform: capitalize;
+  -webkit-text-transform: capitalize;
+  -moz-text-transform: capitalize;
+  -o-text-transform: capitalize;
+  -ms-text-transform: capitalize;
+}
+
+body:hover .about-container span {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+}
+
+body:hover .about-container img {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+}
+
+.about-container h2,
+.education-container h2,
+.skills h2,
+.contact-container h2,
+#proyectos h2,
+#idiomas h2,
+#contacto h2,
+#technical-skills h2,
+#professional-skills h2,
+#skills h2 {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover .about-container h2,
+body:hover .education-container h2,
+body:hover .skills h2,
+body:hover #skills h2,
+body:hover #technical-skills h2,
+body:hover #professional-skills h2,
+body:hover #proyectos h2,
+body:hover #idiomas h2,
+body:hover #contacto h2 {
+  transform: rotateX(360deg);
+  -webkit-transform: rotateX(360deg);
+  -moz-transform: rotateX(360deg);
+  -o-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+}
+
+.about-container button:active,
+.contact-container a:active {
+  transition: all 0.8s ease-in-out;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+}
+
+.education-card,
+.skill-card,
+.technical-skills-container,
+.professional-skills-container,
+.project-card,
+.image-project,
+.languages-container,
+.contact-container {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover .education-card,
+body:hover .skill-card,
+body:hover .technical-skills-container,
+body:hover .professional-skills-container,
+body:hover .project-card,
+body:hover .image-project,
+body:hover .languages-container,
+body:hover .contact-container {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+}
+
+.social-media-container {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover .social-media-container {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  90% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+}
+
+.download-cv a,
+.contact-button {
+  display: inline-block;
+  transition: all 0.8s ease-in-out;
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+.download-cv:hover a,
+.contact-button:hover {
+  transform: scale(1.12) rotate(-3deg);
+  -webkit-transform: scale(1.12) rotate(-3deg);
+  -moz-transform: scale(1.12) rotate(-3deg);
+  animation: none;
+}
+
+.btn-style,
+.theme-button,
+.navigation-container label {
+  transition: all 0.8s ease-in-out;
+}
+
+.btn-style:hover,
+.theme-button:hover,
+.navigation-container label:hover {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.project-card > ul > li,
+.education-card,
+.skill-card,
+.contact-card {
+  transition: all 0.8s ease-in-out;
+}
+
+.project-card > ul > li:hover,
+.education-card:hover,
+.skill-card:hover,
+.contact-card:hover {
+  transform: translateY(-6px) rotate(-0.5deg) scale(1.02);
+}
+
+.technical-skills-container td,
+.professional-skills-container td {
+  transition: all 0.8s ease-in-out;
+}
+
+.technical-skills-container tr:hover td,
+.professional-skills-container tr:hover td {
+  transform: translateX(6px);
+}
+
+.personal-info-container a,
+.footer-container a {
+  transition: all 0.8s ease-in-out;
+}
+
+body:hover .personal-info-container a,
+body:hover .footer-container a {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+}

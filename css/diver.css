@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import url(./formal.css);
+
+/* VERSIÓN DIVERTIDA */
+
+/* Importación de tipografía limpia desde Google Fonts (Plus Jakarta Sans) */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+/* Paleta divertida: fucsia, cian, amarillo y lima sobre fondo morado oscuro */
+:root {
+  --bg-main: #1a0533; /* Fondo morado noche */
+  --bg-card: #2e0f5c; /* Tarjetas violeta intenso */
+  --bg-card-hover: #4a0e7a; /* Hover fucsia oscuro */
+  --bg-badge: #3d0d6b;
+
+  --text-main: #fff7ed; /* Texto principal crema */
+  --text-muted: #ffe66d; /* Texto secundario amarillo */
+  --text-light: #ffffff;
+
+  --primary: #ff2e97; /* Fucsia principal */
+  --secondary: #00f5d4; /* Cian secundario */
+  --border-color: #ff7ab6; /* Borde rosa */
+  --accent-lime: #b8ff3c; /* Acento lima para hovers */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-full: 9999px;
+  --shadow-main: 0 10px 25px -5px rgba(255, 46, 151, 0.45);
+}
+
+/* Modo Claro alternativo para esta versión */
+body.light-theme {
+  --bg-main: #fff0f9; /* Fondo rosa pastel */
+  --bg-card: #ffffff; /* Tarjetas blancas */
+  --bg-card-hover: #e0fff9;
+  --bg-badge: #ffe3f3;
+
+  --text-main: #4a0072; /* Texto morado oscuro */
+  --text-muted: #d6006f; /* Texto secundario fucsia */
+
+  --primary: #ff2e97;
+  --secondary: #00b5a0;
+  --border-color: #ffb3dd;
+  --accent-lime: #5cb800;
+  --shadow-main: 0 4px 14px rgba(255, 46, 151, 0.2);
+}
+
+/* Sin línea inferior en las celdas de las tablas de habilidades (no se alinea con las barras meter) */
+.technical-skills-table td,
+.professional-skills-container td {
+  border-bottom: none;
+}
+
+/* Hover de texto: los colores cambian al pasar el ratón */
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover {
+  color: var(--secondary);
+  transition: color 0.5s ease-in-out;
+}
+
+p:hover,
+li:hover,
+td:hover,
+th:hover {
+  color: var(--accent-lime);
+  transition: color 0.5s ease-in-out;
+}
+
+a:hover,
+button:hover {
+  color: var(--secondary);
+  transition: color 0.5s ease-in-out;
+}
+
+/* Tipografía base */
+body,
+button,
+input,
+select,
+textarea {
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

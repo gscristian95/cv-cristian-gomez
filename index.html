@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es" data-theme="dark" id="home">
+  <head>
+    <title>Currículum Vitae - Cristian Gómez</title>
+    <!-- Requiered meta tags for responsive design and SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Currículum Vitae de Cristian Gómez" />
+    <meta name="keywords" content="Currículum Vitae, Cristian Gómez, CV, perfil profesional" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="Cristian Gómez" />
+    <!-- OG -->
+    <meta property="og:title" content="Currículum Vitae - Cristian Gómez" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/perfil-cristian.jpg" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:description" content="CV de Cristian Gómez" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Cristian Gómez" />
+    <meta property="og:image:alt" content="Logo CV" />
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/images/resume-4-svgrepo-com.svg" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link id="estilos" rel="stylesheet" href="./css/formal.css" />
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/cv-content.js"></script>
+    <!-- PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header id="top">
+      <!-- Cabecera del sitio -->
+      <div class="arrow-up">
+        <a href="#home" title="Volver arriba">
+          <img
+            class="icon-theme"
+            src="assets/images/up-direction-upload-svgrepo-com.svg"
+            alt="Volver arriba"
+            width="35"
+            height="35"
+          />
+        </a>
+      </div>
+      <div class="header-logo">
+        <a href="index.html"
+          ><img class="icon-theme logo" src="assets/images/resume-4-svgrepo-com.svg" alt="Logo" width="50" height="50"
+        /></a>
+        <h1>Currículum Vitae</h1>
+      </div>
+      <!-- Main navigation menu -->
+      <div class="navigation-container">
+        <nav>
+          <!-- Checkbox oculto para menú móvil -->
+          <input type="checkbox" id="check-menu" class="menu-toggle" />
+          <!-- Etiqueta con el icono hamburgues que actuará como botón -->
+          <label for="check-menu" class="menu-button">&#9776;</label>
+          <ul>
+            <li><a href="#datosPersonales">Datos Personales</a></li>
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#technical-skills">Habilidades Técnicas</a></li>
+            <li><a href="#professional-skills">Habilidades Profesionales</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="style-switcher">
+              <!-- Boton para formal style -->
+              <div class="style-switcher-container">
+                <button class="btn-style" onclick="document.getElementById('estilos').href = './css/formal.css'">
+                  Versión Formal
+                </button>
+                <button class="btn-style" onclick="document.getElementById('estilos').href = './css/diver.css'">
+                  Versión Divertida
+                </button>
+                <button
+                  class="btn-style"
+                  onclick="document.getElementById('estilos').href = './css/PARTE1_CV/animado.css'"
+                >
+                  Versión Animada
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Boton para Tema -->
+      <button id="theme-toggle" class="theme-button" aria-label="Cambiar tema"><span>☀️</span></button>
+    </header>
+    <!-- Main content sections -->
+    <main>
+      <section id="datosPersonales">
+        <div class="personal-info-container">
+          <h2>Datos Personales</h2>
+          <!-- Información personal -->
+          <span>Hola, soy</span>
+          <h2>Cristian Gómez</h2>
+          <h3>Desarrollador Web Full-Stack Junior | Alumno 2º DAW</h3>
+          <ul>
+            <li>
+              <img
+                class="icon-theme"
+                src="assets/images/email-1572-svgrepo-com.svg"
+                alt="Email"
+                width="16"
+                height="16"
+              />
+              <a href="mailto:gscristian95@gmail.com">gscristian95@gmail.com</a>
+            </li>
+            <li>
+              <img
+                class="icon-theme"
+                src="assets/images/call-chat-svgrepo-com.svg"
+                alt="Teléfono"
+                width="16"
+                height="16"
+              />
+              <a href="tel:{{TELEFONO_PRIVADO_HREF}}">{{TELEFONO_PRIVADO}}</a>
+            </li>
+            <li>
+              <img
+                class="icon-theme"
+                src="assets/images/place-localizer-svgrepo-com.svg"
+                alt="Ubicación"
+                width="16"
+                height="16"
+              />
+              <a
+                href="https://www.google.com/maps/place/Almoines,+Valencia/@38.9436622,-0.1870695,16z/data=!3m1!4b1!4m6!3m5!1s0xd61e8f8d17491b1:0x51822c904de87daf!8m2!3d38.9438345!4d-0.1816936!16s%2Fm%2F02qcg7c?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                >Almoines, 46723 (Valencia, España)</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- personal-info-container -->
+        <!-- Redes Sociales -->
+        <div class="social-media-container">
+          <ul>
+            <li>
+              <a href="https://github.com/gscristian95" target="_blank">
+                <img
+                  class="icon-theme"
+                  src="assets/images/github-142-svgrepo-com.svg"
+                  alt="GitHub"
+                  width="16"
+                  height="16"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/_crixtian.g/" target="_blank">
+                <img
+                  class="icon-theme"
+                  src="assets/images/instagram-svgrepo-com.svg"
+                  alt="Instagram"
+                  width="16"
+                  height="16"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/feed/" target="_blank">
+                <img
+                  class="icon-theme"
+                  src="assets/images/linkedin-svgrepo-com.svg"
+                  alt="LinkedIn"
+                  width="16"
+                  height="16"
+                />
+              </a>
+            </li>
+            <!-- <li>
+              <a href="https://x.com/home" target="_blank">
+                <img
+                  class="icon-theme"
+                  src="assets/images/twitter-154-svgrepo-com.svg"
+                  alt="Twitter"
+                  width="16"
+                  height="16"
+                />
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about-container">
+          <!-- Información sobre mí -->
+          <div>
+            <img src="assets/images/perfil-cristian.jpg" alt="Foto de perfil" width="100" height="100" />
+          </div>
+          <div>
+            <h2>Sobre Mí</h2>
+            <p>
+              Desarrollador Web Full-Stack Junior en formación en el ciclo superior de Desarrollo de Aplicaciones Web
+              (2º DAW), con base previa en Sistemas Microinformáticos y Redes (SMR). Especializado en arquitectura
+              backend con <strong>PHP orientado a objetos</strong> y persistencia estructurada sobre
+              <strong>MySQL</strong>, consumo asíncrono de APIs RESTful y diseño de interfaces web táctiles bajo
+              principios <em>mobile-first</em>. Destaco por una elevada autonomía técnica, rigor en la arquitectura del
+              código y un flujo de trabajo optimizado mediante gestión del conocimiento en Obsidian y Notion, combinada
+              con asistencia de modelos de Inteligencia Artificial para acelerar la documentación técnica y el ciclo de
+              vida del software.
+            </p>
+            <span class="icon">HTML</span>
+            <span class="icon">CSS</span>
+            <span class="icon">JavaScript</span>
+            <span class="icon">PHP</span>
+            <span class="icon">Git</span>
+            <span class="icon">MySQL</span>
+            <span class="icon">Linux</span>
+            <span class="icon">Docker</span>
+            <span class="icon">Java</span>
+            <button id="btn-descargar-cv" class="download-cv">
+              <a href="./assets/docs/Currículum Vitae - Cristian Gómez.pdf" target="_blank">Descargar CV</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="educacion">
+        <div class="education-container">
+          <h2>Educación</h2>
+          <!-- Cards de educación -->
+          <div class="education-card">
+            <h3>C.F.G.S. Desarrollo de Aplicaciones Web (DAW)</h3>
+            <p>IES María Enriquez, Gandia</p>
+            <time datetime="2026">Cursando 2025 - 2027</time>
+          </div>
+          <div class="education-card">
+            <h3>C.F.G.M. Sistemas Microinformáticos y Redes (SMR)</h3>
+            <p>IES Jaume II el Just, Tavernes de la Valldigna</p>
+            <time datetime="2021">2019 - 2021</time>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Habilidades</h2>
+        <!-- Cards de habilidades -->
+        <div class="skills-container">
+          <div class="skill-card">
+            <h3>Diseño Web</h3>
+            <p>
+              Interfaces responsivas <em>mobile-first</em> con <strong>HTML5</strong> semántico, <strong>CSS3</strong>
+              (Flexbox, Grid) y áreas táctiles accesibles de al menos 48px.
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3>Desarrollo Backend</h3>
+            <p>
+              Arquitectura desacoplada con <strong>PHP 8.x</strong> (POO, PDO), <strong>MySQL 8.0</strong> y endpoints
+              RESTful JSON, con ingesta asíncrona de APIs externas.
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3>Metodología e IA</h3>
+            <p>
+              Gestión del conocimiento con <strong>Obsidian</strong> y <strong>Notion</strong>, especificación de
+              requerimientos, desarrollo asistido por <strong>GitHub Copilot</strong> y <strong>Scrum</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="technical-skills">
+        <h2>Habilidades Técnicas</h2>
+        <!-- Información de habilidades técnicas -->
+        <div class="technical-skills-container">
+          <table class="technical-skills-table">
+            <thead>
+              <tr>
+                <th colspan="3">Lista de Habilidades Técnicas</th>
+              </tr>
+              <tr>
+                <th>Habilidad</th>
+                <th>Descripción</th>
+                <th>Nivel</th>
+              </tr>
+            </thead>
+            <tbody class="technical-skills-table-body">
+              <tr>
+                <td>Desarrollo Frontend y PWA</td>
+                <td>
+                  Maquetación <em>mobile-first</em> con <em>HTML5</em>, <em>CSS3</em> (Flexbox, Grid),
+                  <em>JavaScript</em> ES6 y <em>Tailwind CSS</em>, con Service Workers e <em>IndexedDB</em>.
+                </td>
+                <td>
+                  <meter id="programacion" value="80" min="0" max="100"></meter> <label for="programacion">80%</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Desarrollo Backend y BBDD</td>
+                <td>
+                  Desarrollo con <em>PHP 8.x</em> (POO, PDO) y <em>Java</em>, persistencia en <em>MySQL 8.0</em>
+                  (InnoDB) y endpoints RESTful JSON.
+                </td>
+                <td>
+                  <meter id="gestion-bases-datos" value="70" min="0" max="100"></meter>
+                  <label for="gestion-bases-datos">70%</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Sistemas, Redes y DevOps</td>
+                <td>
+                  Administración de <em>Linux</em> (Ubuntu Server), <em>Apache</em>, <em>Docker</em> y control de
+                  versiones con <em>Git</em> y GitHub.
+                </td>
+                <td>
+                  <meter id="contenedores-virtualizacion" value="60" min="0" max="100"></meter>
+                  <label for="contenedores-virtualizacion">60%</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="professional-skills">
+        <h2>Habilidades Profesionales</h2>
+        <!-- Información de habilidades profesionales -->
+        <div class="professional-skills-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Habilidad</th>
+                <th>Nivel</th>
+              </tr>
+            </thead>
+            <tbody class="professional-skills-table-body">
+              <tr>
+                <td>Metodología Ágil</td>
+                <td>
+                  <meter id="comunicacion" value="90" min="0" max="100"></meter> <label for="comunicacion">90%</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Documentación Rigurosa</td>
+                <td>
+                  <meter id="trabajo-equipo" value="85" min="0" max="100"></meter>
+                  <label for="trabajo-equipo">85%</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Resolución Analítica</td>
+                <td>
+                  <meter id="gestion-proyectos" value="70" min="0" max="100"></meter>
+                  <label for="gestion-proyectos">70%</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Capacidad de Autoaprendizaje</td>
+                <td>
+                  <meter id="resolucion-problemas" value="90" min="0" max="100"></meter>
+                  <label for="resolucion-problemas">90%</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+        <!-- Información de proyectos -->
+        <div class="projects-container">
+          <div class="image-project">
+            <img
+              class="icon-theme"
+              src="assets/images/logo_app_estado_del_mar_sin_fondo.png"
+              alt="API REST Project"
+              width="150"
+              height="150"
+            />
+          </div>
+          <div class="project-card">
+            <h3>Plataforma Web PWA «Estado del Mar» (PIM)</h3>
+            <p>
+              Proyecto Integrador Intermodular de 2º DAW como <strong>Lead Full-Stack Developer</strong> y UI/UX
+              Designer. Stack: <strong>PHP 8.x</strong> (PDO/POO), <strong>MySQL 8.0</strong>,
+              <strong>JavaScript</strong> ES6, <strong>Service Workers</strong>, <strong>IndexedDB</strong>,
+              <strong>Tailwind CSS</strong> y APIs REST (AEMET, Puertos del Estado).
+              <!-- <a href="https://github.com/gscristian95/Project2DAW_CristianGomez.git" target="_blank">Repositorio</a> -->
+            </p>
+            <h4>Hitos técnicos</h4>
+            <ul>
+              <li>
+                <b>Hito 1: <em>Caché en servidor y cuotas de API</em></b>
+                <ul>
+                  <li>Tabla <em>telemetria_cache</em> en MySQL 8.0, sincronizada cada 10-15 minutos.</li>
+                  <li>Cumplimiento de la cuota de AEMET (&lt;10 req/min) con respuestas inferiores a 3 segundos.</li>
+                </ul>
+              </li>
+              <li>
+                <b>Hito 2: <em>Modelo relacional normalizado de 7 entidades</em></b>
+                <ul>
+                  <li>Claves foráneas con <em>ON DELETE CASCADE</em> y coordenadas GPS en <em>DECIMAL(9,6)</em>.</li>
+                  <li>Índices compuestos y clave de unicidad para evitar duplicados en la telemetría.</li>
+                </ul>
+              </li>
+              <li>
+                <b>Hito 3: <em>Resiliencia offline (PWA)</em></b>
+                <ul>
+                  <li>Service Workers e IndexedDB para guardar entre 15 y 30 minutos de lecturas y cartografía.</li>
+                  <li>Consulta de condiciones marítimas en la costa aunque no haya cobertura móvil.</li>
+                </ul>
+              </li>
+              <li>
+                <b>Hito 4: <em>Diseño táctil «Zero Social Noise»</em></b>
+                <ul>
+                  <li>Paleta WCAG AA para visibilidad bajo sol directo y áreas táctiles de 48px o más.</li>
+                  <li>Chips de telemetría comunitaria de un solo toque. Auditoría de Nielsen con 10/10 PASS.</li>
+                </ul>
+              </li>
+              <li>
+                <b>Hito 5: <em>Ciclo de vida ágil y desarrollo asistido</em></b>
+                <ul>
+                  <li>Scrum en 3 Sprints con Git Flow formal.</li>
+                  <li>Integración de un agente de IA mediante <em>.github/copilot-instructions.md</em>.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <h3>Orquestador de Debate Asíncrono entre LLMs (Consola)</h3>
+            <p>
+              Programa en <strong>Java</strong> que genera una conversación entre 2 <strong>LLMs</strong>. Utiliza
+              <strong>Ollama</strong>
+              para facilitar el acceso a las IA como modelos locales y la librería LangChain4j
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>CV Animado y Tamagotchi en Consola Java</h3>
+            <p>
+              Proyectos de terminal en <strong>Java</strong> con <strong>POO</strong>: un CV con banners ASCII y
+              desplazamiento vertical, y un Tamagotchi con bucles de eventos, máquinas de estado y persistencia.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="idiomas">
+        <h2>Idiomas</h2>
+        <!-- Información de idiomas -->
+        <div class="languages-container">
+          <div class="language-card">
+            <img src="assets/images/spain-country-flag-round-icon.svg" alt="Español" width="25" height="25" />
+            <label for="espanol">Español</label>
+            <meter id="espanol" value="100" min="0" max="100"></meter>
+            <label for="espanol">100%</label>
+          </div>
+          <div class="language-card">
+            <label for="valenciano">Valenciano / Catalán</label>
+            <meter id="valenciano" value="100" min="0" max="100"></meter>
+            <label for="valenciano">100%</label>
+          </div>
+          <div class="language-card">
+            <img src="assets/images/uk-flag-round-circle-icon.svg" alt="Inglés" width="25" height="25" />
+            <label for="ingles">Inglés (B1)</label>
+            <meter id="ingles" value="50" min="0" max="100"></meter>
+            <label for="ingles">50%</label>
+          </div>
+        </div>
+      </section>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <!-- Información de contacto -->
+        <div class="contact-container">
+          <div class="contact-card">
+            <h3>¿Interesado en contactarme?</h3>
+            <p>Escríbeme un mensaje.</p>
+            <a
+              class="contact-button"
+              href="mailto:gscristian95@gmail.com?subject=Contacto%20tras%20ver%20tu%20CV&amp;body=Hola%20Cristian%2C%0A%0AHe%20visto%20tu%20CV%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo.%0A%0AUn%20saludo%2C"
+              target="_blank"
+              >Contactar</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-container">
+        <!-- Redes Sociales -->
+        <ul>
+          <li>
+            <a href="https://github.com/gscristian95" target="_blank">
+              <img
+                class="icon-theme"
+                src="assets/images/github-142-svgrepo-com.svg"
+                alt="GitHub"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_crixtian.g/" target="_blank">
+              <img
+                class="icon-theme"
+                src="assets/images/instagram-svgrepo-com.svg"
+                alt="Instagram"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/feed/" target="_blank">
+              <img
+                class="icon-theme"
+                src="assets/images/linkedin-svgrepo-com.svg"
+                alt="LinkedIn"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/home" target="_blank">
+              <img
+                class="icon-theme"
+                src="assets/images/twitter-154-svgrepo-com.svg"
+                alt="Twitter"
+                width="16"
+                height="16"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p>&copy; 2026 Cristian Gómez. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+/* VARIABLES GLOBALES Y SISTEMA DE DISEÑO */
+
+/* TEMA OSCURO (Por defecto en :root) */
+:root {
+  /* FONDOS Y ESTRUCTURAS DE CAJAS */
+  --bg-main: #0f172a; /* Fondo principal de la caja */
+  --bg-card: #1e293b; /* Fondo de tarjetas y bloques de contenido */
+  --bg-card-hover: #334155; /* Estado hover al pasar el cursor sobre una tarjeta */
+  --bg-badge: #0f172a; /* Fondo para las insignias de habilidades */
+
+  /* COLORES DE MARCA Y DESTACADOS */
+  --primary: #38bdf8; /* Color principal para Nombres y títulos */
+  --secondary: #0284c7; /* Color secundario para botones e indicadores */
+  --accent: #e9eff0; /* Color de destello/hover */
+  --boder-color: #334155; /* Bordes sutiles entre secciones y tarjetas */
+
+  /* TIPOGRAFÍA Y ESTADOS DE TEXTO */
+  --text-main: #f8fafc; /* Texto para el cuerpo */
+  --text-muted: #94a3b8; /* Texto secundario (fechas, subtitulos..) */
+  --text-light: #ffffff; /* Texto para blancos puros */
+
+  /* GEOMETRÍA Y EFECTOS */
+  --radius-sm: 0.375rem; /* Bordes ligeramente redondeados (6px) */
+  --radius-md: 0.75rem; /* Bordes redondeados para tarjetas (12px) */
+  --radius-full: 9999px; /* Redondeo completo para fotos circulares y badges */
+  --shadow-main: 0 10px 15px -3px rgba(0, 0, 0, 0.4); /* Sombras para profundidad */
+}
+
+/* TEMA CLARO (Redefinir variables para tema claro) */
+body.light-theme {
+  /* FONDOS Y ESTRUCTURAS DE CAJAS */
+  --bg-main: #eef2f5; /* Fondo principal */
+  --bg-card: #ffffff; /* Tarjetas en blanco puro */
+  --bg-card-hover: #e8ecf0; /* Fondo al pasar el cursor */
+  --bg-badge: #e8ecf1; /* Fondo suave para bages */
+
+  /* COLORES DE MARCA Y DESTACADOS */
+  --primary: #0ba9ed;
+  --secondary: #107fb7;
+  --accent: #e9eff0; /* Color de destello/hover */
+  --border-color: #e2e8f0;
+
+  /* TIPOGRAFÍA Y ESTADO DE TEXTO */
+  --text-main: #0f172a; /* Texto principal oscuro */
+  --text-muted: #475569; /* Texto secundario */
+  --text-light: #000000;
+}

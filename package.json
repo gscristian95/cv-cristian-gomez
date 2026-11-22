@@ -1,0 +1,13 @@
+{
+  "name": "cv-cristian-gomez",
+  "version": "1.0.0",
+  "description": "CV Web interactivo con generación automática de PDF",
+  "main": "js/generate-pdf.js",
+  "scripts": {
+    "build:pdf": "node js/generate-pdf.js",
+    "build": "node js/build-site.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.15.0"
+  }
+}

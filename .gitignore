@@ -1,0 +1,11 @@
+# Dependencias de Node
+node_modules/
+
+# Archivos de sistema de Mac
+.DS_Store
+
+# PDFs generados (incluido el CV en assets/docs, con datos personales)
+*.pdf
+
+# Sitio generado para Netlify (con el teléfono inyectado)
+dist/

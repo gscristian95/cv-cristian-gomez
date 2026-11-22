@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículum Vitae - Cristian Gómez</title>
+    <meta name="author" content="Cristian Gómez" />
+    <style>
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        color: #111827;
+        background: #ffffff;
+      }
+
+      img {
+        max-width: 100px;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .profile {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .profile-info {
+        display: block;
+      }
+
+      .page-content {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      .page-1,
+      .page-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .card,
+      .skill-card,
+      .project-card {
+        border: 1px solid #e5e7eb;
+        padding: 12px 16px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #d1d5db;
+        padding: 6px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background-color: #f3f4f6;
+      }
+
+      a {
+        color: #0284c7;
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .contact-list li {
+        display: inline-block;
+        margin: 0 12px 4px 0;
+      }
+
+      .edu-meta {
+        color: #475569;
+        font-size: 0.9em;
+      }
+
+      footer {
+        margin-top: 16px;
+        font-size: 0.85em;
+        color: #64748b;
+        text-align: center;
+      }
+
+      /* ==========================================================================
+         DIRECTIVAS DE IMPRESIÓN PARA PDF A4 (@media print)
+         ========================================================================== */
+
+      @media print {
+        /* Ajuste de color para impresión PDF */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        /* 1. Configuración de página A4 y márgenes normalizados */
+        @page {
+          size: A4 portrait;
+          margin: 0.8cm 1.3cm 0.8cm 1.3cm;
+        }
+
+        /* 2. Reseteo de fondo y colores para contraste de impresión óptimo */
+        html,
+        body {
+          background-color: #ffffff !important;
+          color: #111827 !important;
+          font-family:
+            "Inter",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif !important;
+          font-size: 9pt !important;
+          line-height: 1.3 !important;
+        }
+
+        /* 3. Ocultación de controles interactivos, botones y elementos web */
+        header nav,
+        .main-nav,
+        .nav-links,
+        .btn,
+        button,
+        #theme-toggle,
+        .btn-icon,
+        .hero-cta,
+        .main-footer,
+        .web-only {
+          display: none !important;
+        }
+
+        /* 4. Cabecera imprimible compacta */
+        .main-header,
+        .header-container {
+          background: none !important;
+          border-bottom: 2px solid #0284c7 !important;
+          padding-bottom: 0.5rem !important;
+          margin-bottom: 1rem !important;
+        }
+
+        /* 5. Prevención de saltos huérfanos dentro de cajas y tablas */
+        section,
+        article,
+        table,
+        tr,
+        .card,
+        .skill-card,
+        .project-card {
+          page-break-inside: avoid !important;
+          break-inside: avoid !important;
+        }
+
+        /* 6. Salto de página controlado: el bloque de la página 2 empieza en hoja nueva */
+        .page-2 {
+          page-break-before: auto !important;
+          break-before: auto !important;
+          margin-top: 0 !important;
+        }
+
+        /* 7. Estilo de tablas de habilidades e idiomas */
+        table {
+          width: 100% !important;
+          border-collapse: collapse !important;
+          margin: 0.5rem 0 !important;
+        }
+
+        th,
+        td {
+          border: 1px solid #d1d5db !important;
+          padding: 0.4rem 0.6rem !important;
+          font-size: 8pt !important;
+          padding: 0.25rem 0.4rem !important;
+          text-align: left !important;
+        }
+
+        th {
+          background-color: #f3f4f6 !important;
+          color: #111827 !important;
+          font-weight: 700 !important;
+        }
+
+        /* 8. Tarjetas de proyectos y contenedor principal */
+        .page-content {
+          max-width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          gap: 1rem !important;
+        }
+
+        .card {
+          box-shadow: none !important;
+          border: 1px solid #e5e7eb !important;
+          background: #ffffff !important;
+          padding: 0.75rem 1rem !important;
+        }
+
+        h1 {
+          font-size: 1.5rem !important;
+          margin-bottom: 0.1rem !important;
+          color: #0284c7 !important;
+        }
+
+        h2 {
+          font-size: 1.05rem !important;
+          margin: 0.4rem 0 0.2rem 0 !important;
+          border-bottom: 1px solid #e5e7eb !important;
+        }
+
+        h3 {
+          font-size: 1rem !important;
+          margin-bottom: 0.2rem !important;
+          color: #0f172a !important;
+        }
+
+        /* 8b. Compactación de párrafos y listas para encajar cada bloque en una hoja */
+        .page-1 p,
+        .page-1 li,
+        .page-2 p,
+        .page-2 li {
+          font-size: 8pt !important;
+          line-height: 1.25 !important;
+          margin-bottom: 0.15rem !important;
+        }
+
+        .page-1,
+        .page-2 {
+          gap: 0.4rem !important;
+        }
+
+        .page-1 section,
+        .page-2 section {
+          margin: 0 !important;
+        }
+
+        .project-card,
+        .card {
+          padding: 0.4rem 0.6rem !important;
+        }
+
+        h2 {
+          margin: 0.4rem 0 0.2rem 0 !important;
+        }
+
+        /* 9. Enlaces en texto plano sin subrayados estridentes */
+        a {
+          color: #0284c7 !important;
+          text-decoration: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="page-1">
+        <header class="main-header">
+          <div class="profile">
+            <img src="../assets/images/perfil-cristian.jpg" alt="Foto de perfil de Cristian" />
+            <div class="profile-info">
+              <h1>Cristian Gómez</h1>
+              <h3>Desarrollador Web Full-Stack Junior | Alumno 2º DAW</h3>
+            </div>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <a
+                href="https://www.google.com/maps/place/Almoines,+Valencia/@38.9436622,-0.1870695,16z/data=!3m1!4b1!4m6!3m5!1s0xd61e8f8d17491b1:0x51822c904de87daf!8m2!3d38.9438345!4d-0.1816936!16s%2Fm%2F02qcg7c?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                >Almoines, 46723 (Valencia, España)</a
+              >
+            </li>
+            <li><a href="mailto:gscristian95@gmail.com">gscristian95@gmail.com</a></li>
+            <li><a href="tel:{{TELEFONO_PRIVADO_HREF}}">{{TELEFONO_PRIVADO}}</a></li>
+            <li><a href="https://github.com/gscristian95" target="_blank">github.com/gscristian95</a></li>
+            <li>
+              <!-- Repositorio del proyecto privado actualmente -->
+              <!-- <a href="https://github.com/gscristian95/Project2DAW_CristianGomez.git"
+                >github.com/gscristian95/Project2DAW_CristianGomez</a
+              > -->
+            </li>
+          </ul>
+        </header>
+
+        <section id="sobre-mi">
+          <h2>Sobre Mí</h2>
+          <p>
+            Desarrollador Web Full-Stack Junior en formación en 2º DAW, con base previa en Sistemas Microinformáticos y
+            Redes. Especializado en backend con PHP orientado a objetos y MySQL, consumo de APIs RESTful y diseño web
+            <em>mobile-first</em>. Autonomía técnica, rigor en la arquitectura del código y documentación estructurada
+            en Obsidian y Notion, con apoyo de herramientas de IA para el ciclo de vida del software.
+          </p>
+        </section>
+
+        <section id="formacion">
+          <h2>Formación Académica Reglada</h2>
+          <div class="card">
+            <h3>C.F.G.S. Desarrollo de Aplicaciones Web (DAW)</h3>
+            <p class="edu-meta">IES María Enríquez (Gandia, Valencia) · 2025 – 2027 (actualmente cursando 2º curso)</p>
+            <p>
+              <em>Competencias:</em> Desarrollo web en entorno cliente (DIW), entorno servidor (DWES), despliegue de
+              aplicaciones (DAW) y proyecto integrador intermodular (PIM).
+            </p>
+          </div>
+          <div class="card">
+            <h3>C.F.G.M. Sistemas Microinformáticos y Redes (SMR)</h3>
+            <p class="edu-meta">IES Jaume II el Just (Tavernes de la Valldigna, Valencia) · 2019 – 2021 (titulado)</p>
+            <p>
+              <em>Competencias:</em> Montaje y mantenimiento de sistemas, redes de área local, seguridad informática,
+              administración básica de servidores y sistemas operativos cliente/servidor.
+            </p>
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2>Habilidades Técnicas y Herramientas</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Área de Especialización</th>
+                <th>Tecnologías, Lenguajes y Protocolos</th>
+                <th>Competencias y Enfoque Práctico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Desarrollo Frontend &amp; PWA</strong></td>
+                <td>
+                  HTML5 semántico, CSS3 moderno (Flexbox, Grid), JavaScript nativo (ES6 Modules), Tailwind CSS, Service
+                  Workers, IndexedDB, Web App Manifest.
+                </td>
+                <td>
+                  Maquetación responsiva <em>mobile-first</em>, accesibilidad táctil (Touch Targets ≥48px en
+                  <em>Thumb Zone</em>), retención local de datos y resiliencia offline.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Desarrollo Backend &amp; BBDD</strong></td>
+                <td>
+                  PHP 8.x (POO, PDO), Java, MySQL 8.0 (motor InnoDB, UTF8mb4), cURL, endpoints RESTful JSON, migración
+                  planificada a Laravel 11.
+                </td>
+                <td>
+                  Arquitectura desacoplada, ingesta asíncrona de APIs externas, capas de caché en servidor para
+                  mitigación de cuotas y normalización relacional estricta.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Sistemas, Redes &amp; DevOps</strong></td>
+                <td>
+                  Linux (Ubuntu Server / Bash), Apache, Docker (conceptos base y despliegue), Git &amp; GitHub (Git Flow
+                  con ramas de Sprint), SSH, FTP.
+                </td>
+                <td>
+                  Administración de servidores, despliegue de aplicaciones en entornos VPS, control de versiones por
+                  ramas y análisis comparativo de hosting.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Metodología, Flujo &amp; IA</strong></td>
+                <td>
+                  Obsidian (documentación estructurada en Markdown/Zettelkasten), Notion, GitHub Copilot
+                  (<code>copilot-instructions.md</code>), Gemini.
+                </td>
+                <td>
+                  Gestión del conocimiento técnico, especificación de requerimientos de ingeniería, desarrollo asistido
+                  por IA y metodología ágil Scrum (3 Sprints).
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Habilidades Profesionales y de Gestión</h3>
+          <ul>
+            <li><strong>Metodología Ágil:</strong> Planificación por Sprints y control de versiones semántico.</li>
+            <li>
+              <strong>Resolución Analítica:</strong> Diagnóstico sistemático de errores, optimización de consultas SQL y
+              latencias en red.
+            </li>
+            <li><strong>Documentación Rigurosa:</strong> Esquemas relacionales, wireframes y guías de arquitectura.</li>
+          </ul>
+        </section>
+
+        <section id="proyectos-consola">
+          <h2>Proyectos Complementarios en GitHub</h2>
+          <div class="project-card">
+            <h3>Orquestador de Debate Asíncrono entre LLMs (Consola)</h3>
+            <p>
+              <strong>Tecnologías:</strong> JavaScript / Node.js, consumo de APIs de Modelos de Lenguaje.<br />
+              Aplicación de terminal que recibe un tema de discusión por línea de comandos y gestiona automáticamente un
+              diálogo argumentativo entre dos instancias independientes de modelos de IA, controlando turnos,
+              alternancia de contexto y parseo de respuestas en tiempo real.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>CV Animado &amp; Tamagotchi en Consola Java</h3>
+            <p>
+              <strong>Tecnologías:</strong> Java (JDK), POO.<br />
+              Terminal con arte ASCII animado (créditos continuos) y un Tamagotchi con bucles de eventos y máquinas de
+              estado.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="page-2">
+        <section id="proyectos">
+          <h2>Proyecto Principal: Plataforma Web PWA «Estado del Mar»</h2>
+          <div class="project-card">
+            <p>
+              <strong>Contexto:</strong> Proyecto Integrador Intermodular (PIM · 2º DAW · IES María Enríquez) ·
+              <strong>Rol:</strong> Lead Full-Stack Developer &amp; UI/UX Designer<br />
+              <strong>Repositorio:</strong> github.com/gscristian95/Project2DAW_CristianGomez (ramas: <code>main</code>,
+              <code>Sprint0</code>, <code>Sprint1</code>)<br />
+              <strong>Stack:</strong> PHP 8.x (PDO/POO), MySQL 8.0 (InnoDB), JavaScript Vanilla (ES6 Modules), Service
+              Workers, IndexedDB, Tailwind CSS, REST APIs (AEMET, Puertos del Estado), Copilot IA.
+            </p>
+            <h3>Hitos técnicos principales</h3>
+            <ol>
+              <li>
+                <strong>Caché en servidor y optimización de cuotas API:</strong> Tabla de persistencia
+                <code>telemetria_cache</code> en MySQL 8.0 para respetar el límite de AEMET (&lt;10 req/min). Un proceso
+                programado sincroniza cada 10-15 minutos y el cliente consulta solo endpoints locales, con respuestas
+                inferiores a 3 segundos.
+              </li>
+              <li>
+                <strong>Modelo relacional normalizado de 7 entidades:</strong> Claves foráneas con
+                <code>ON DELETE CASCADE</code>, coordenadas GPS en <code>DECIMAL(9,6)</code> (WGS84) e índices
+                compuestos con clave de unicidad para evitar duplicados.
+              </li>
+              <li>
+                <strong>Resiliencia offline en PWA:</strong> Service Workers e IndexedDB guardan en el dispositivo los
+                últimos 15-30 minutos de lecturas y cartografía vectorial, para consultar condiciones marítimas sin
+                cobertura móvil.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="idiomas">
+          <h2>Idiomas</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Idioma</th>
+                <th>Competencia Lingüística</th>
+                <th>Contexto de Uso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Español</strong></td>
+                <td>Nativo</td>
+                <td>Comunicación profesional y redacción técnica completa.</td>
+              </tr>
+              <tr>
+                <td><strong>Valenciano / Catalán</strong></td>
+                <td>Competencia Nativa / Bilingüe</td>
+                <td>Comunicación fluida oral y escrita en el ámbito autonómico.</td>
+              </tr>
+              <tr>
+                <td><strong>Inglés</strong></td>
+                <td>Técnico / Nivel Intermedio (B1)</td>
+                <td>
+                  Lectura fluida de documentación oficial, especificaciones técnicas de APIs y foros de desarrollo.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="contacto">
+          <h2>Contacto</h2>
+          <p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Calle+Valencia+1,+1+46723,+Valencia,+Almoines"
+              target="_blank"
+              >Almoines, 46723 (Valencia, España)</a
+            >
+            · <a href="mailto:gscristian95@gmail.com">gscristian95@gmail.com</a> ·
+            <a href="tel:{{TELEFONO_PRIVADO_HREF}}">{{TELEFONO_PRIVADO}}</a> ·
+            <a href="https://github.com/gscristian95" target="_blank">github.com/gscristian95</a>
+          </p>
+        </section>
+
+        <footer>&copy; 2026 Cristian Gómez. Todos los derechos reservados.</footer>
+      </div>
+    </div>
+  </body>
+</html>

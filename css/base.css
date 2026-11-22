@@ -1,0 +1,71 @@
+/* RESET GLOBAL Y REGLAS BASE */
+@import url(variables.css);
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* El padding y el border no aumentan el ancho de la caja */
+}
+
+/* CONFIGURACION (HTML) */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth; /* Desplazamiento suave cuandos e hace clic en los enlaces de navegación interna */
+}
+
+/* CUERPO DEL DOCUMENTO (BODY):
+ Aplica la tipografía del sistema, asigna colores globales
+ y asegura que el documento ocupe toda la altura de la pantalla
+*/
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6; /* altura de la línea para lectura cómoda */
+  min-height: 100vh; /* altura mínima toda la página */
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease; /* transición fluida del tema */
+}
+
+/* ELEMENTOS MULTIMEDIA Y ENLACES
+ Eviitar que las imágenes se desborden de sus contenedores,
+ limpia los subrayados por defecto de los hipervínculos.
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit; /* hereda el color del texto */
+  text-decoration: none;
+}
+
+/* ADAPTACION RESPOSIVA DE ICONES/IMAGÉNES SEGÚIN EL TEMA */
+
+/* Tema oscuro (por defecto) invertir el color negro a blanco */
+.icon-theme {
+  filter: brightness(0) invert(1); /* negro a blanco */
+  transition: filter 0.5s ease; /* transición suave */
+}
+
+/* Tema claro recuperar el color original */
+body.light-theme .icon-theme {
+  filter: none; /* eliminamos filtros (color original) */
+}
