@@ -61,6 +61,7 @@ El botón "Descargar CV" apunta a `assets/docs/Currículum Vitae - Cristian Góm
 - **En local:** el botón funciona solo si antes has ejecutado `npm run build:pdf`.
 
 ## Demo
-<img width="280" height="569" alt="demo-web" src="https://github.com/user-attachments/assets/ed289133-aff8-4ce3-8239-eb496d57372d" />
+<img width="280" height="543" alt="demo-cv" src="https://github.com/user-attachments/assets/605442d0-092c-4227-803f-587ea194dbfb" />
+
 
 
